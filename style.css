@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+/*seccion inicio*/
+
+#inicio{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+#inicio header{
+    width: 100%;
+    background-color:#fffb05;
+}
+#inicio header .contenido-header{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    position: relative;
+
+}
+.contenido-header nav{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.contenido-header nav ul{
+    display: flex;
+    list-style: none;
+}
+.contenido-header .logo{
+    color: #ff8f46;
+    font-size: 20px;
+}
+.contenido-header nav ul li{
+    text-align: center;
+}
+.contenido-header nav ul li i{
+    display: block;
+    color: #a8a8a8;
+    margin-bottom: 10px;
+}
+.contenido-header nav ul li a{
+    display: block;
+    text-decoration: none;
+    color:#000000;
+    margin: 0px 20px;
+}
+
+.contenido-header nav ul li a:hover{
+color: #e62e2e;
+
+}
+
+/*icons*/
+.contenido-header .icons a{
+    display: inline-block;
+    text-decoration: none;
+    color: #000000;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+
+.contenido-header .icons a:hover{
+    color: #e62e2e;
+}
+
+/*imagen fondo*/
+
+#inicio .fondo {
+    background-image: url('./imagenes/hamburguesas.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff; 
+    padding: 20px;
+}
+
+#inicio .fondo .contenido {
+    max-width: 600px;
+
+}
+
+#inicio .fondo h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#inicio .fondo p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+#inicio .fondo button {
+    background-color:#fffb05;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#inicio .fondo button:hover {
+    background-color: #e62e2E;
+}
