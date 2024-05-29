@@ -80,8 +80,6 @@
     color: #f3f725;
 }
 
-
-
 /* Dispositivos tablet (pantallas de 768px o menos) */
 @media (max-width: 768px) {
     #inicio header .contenido-header {
@@ -106,23 +104,70 @@
 
     .contenido-header .icons {
         margin-top: 10px;
-    }
-
+    } 
 }
 
-/* Dispositivos móviles (pantallas de 480px o menos) */
-@media (max-width: 480px) {
-    .contenido-header nav ul li a {
-        padding: 10px 10px;
-        margin: 0px 5px;
-    }
+/*seccion ubicacion*/
+#ubicacion {
+    width: 100%;
+    padding: 100px 0;
+    background-color: #ffffff;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .ubicacion-info {
+    width: 50%;
+    padding: 20px;
+  }
+  
+  .ubicacion-info h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
 
-    .contenido-header .icons a {
-        padding: 8px 10px;
-    }
+  .ubicacion-info h3 a {
+    text-decoration: none;
+    color:#EEE5D9;
+    font-size: 28px;
+    text-decoration: none;
+    margin-bottom: 15px;
+  }
 
-
+  .ubicacion-info h3 a:hover {
+    color: #d2b68a ;
 }
+  
+  .ubicacion-info p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .ubicacion-img {
+    width: 50%;
+    object-fit: cover;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .ubicacion-info,
+    .ubicacion-img {
+      width: 100%;
+    }
+  }
+
+
+
+
+
+
+
+
 
 
 
@@ -208,3 +253,5 @@
         text-align: center; /* Centra el contenido de contacto en pantallas más pequeñas */
     }
 }
+
+
