@@ -91,6 +91,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Guardar carrito en localStorage
         localStorage.setItem('cart', JSON.stringify(cart));
+
+        // Actualizar la cantidad en la tarjeta del producto
+        const productCards = document.querySelectorAll('.item');
+        productCards.forEach((card, index) => {
+            const quantitySpan = card.querySelector('.quantity');
+            const title = card.querySelector('.titulo-item').textContent;
+            const cartItem = cart.find(item => item.name === title);
+            if (cartItem) {
+                quantitySpan.textContent = cartItem.quantity;
+            } else {
+                quantitySpan.textContent = '0';
+            }
+        });
     }
 
     window.changeQuantity = function (index, delta) {
