@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const cartContent = document.getElementById('cart-content');
     let payButton = document.getElementById('pay-btn');
 
-    let cart = [];
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
     cartIcon.addEventListener('click', function (event) {
         event.preventDefault();
@@ -17,18 +17,36 @@ document.addEventListener('DOMContentLoaded', function () {
         sidebar.classList.remove('open');
     });
 
-    document.querySelectorAll('.boton-item').forEach(button => {
+    document.querySelectorAll('.quantity-controls .quantity-btn').forEach(button => {
         button.addEventListener('click', () => {
+            const action = button.getAttribute('data-action');
             const item = button.closest('.item');
             const title = item.querySelector('.titulo-item').textContent;
             const price = parseFloat(item.querySelector('.precio-item').textContent.replace('$', '').replace('.', ''));
+            const quantitySpan = item.querySelector('.quantity');
+            let quantity = parseInt(quantitySpan.textContent);
+
+            if (action === 'increase') {
+                quantity++;
+            } else if (action === 'decrease' && quantity > 0) {
+                quantity--;
+            }
+
+            quantitySpan.textContent = quantity;
 
             const cartItem = cart.find(product => product.name === title);
 
             if (cartItem) {
-                cartItem.quantity++;
-            } else {
+                cartItem.quantity = quantity;
+                if (cartItem.quantity <= 0) {
+                    cart = cart.filter(product => product.name !== title);
+                }
+            } else if (action === 'increase') {
                 cart.push({ name: title, price: price, quantity: 1 });
+            }
+
+            if (quantity <= 0) {
+                cart = cart.filter(product => product.name !== title);
             }
 
             updateCartContent();
@@ -50,8 +68,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 itemDiv.innerHTML = `
                     <span>${item.name} - $${item.price.toLocaleString()} - Cantidad: ${item.quantity}</span>
                     <div>
-                        <button onclick="changeQuantity(${index}, 1)">+</button>
-                        <button onclick="changeQuantity(${index}, -1)">-</button>
+                        <button class="quantity-btn" onclick="changeQuantity(${index}, 1)">+</button>
+                        <button class="quantity-btn" onclick="changeQuantity(${index}, -1)">-</button>
                     </div>
                 `;
                 cartContent.appendChild(itemDiv);
@@ -60,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         document.getElementById('cart-total').innerHTML = `
             <p>Total: $${total.toLocaleString()}</p>
-            <button class="pay-btn" id="pay-btn">Pagar</button>
+            <button class="pay-btn" id="pay-btn">Total a pagar</button>
         `;
 
         payButton = document.getElementById('pay-btn');
@@ -68,7 +86,11 @@ document.addEventListener('DOMContentLoaded', function () {
             alert('Gracias por su compra!');
             cart = [];
             updateCartContent();
+            localStorage.removeItem('cart'); // Limpiar carrito en localStorage
         });
+
+        // Guardar carrito en localStorage
+        localStorage.setItem('cart', JSON.stringify(cart));
     }
 
     window.changeQuantity = function (index, delta) {
@@ -78,4 +100,9 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         updateCartContent();
     };
+
+    // Cargar carrito desde localStorage
+    if (cart.length > 0) {
+        updateCartContent();
+    }
 });
