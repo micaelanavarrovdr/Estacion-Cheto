@@ -86,7 +86,32 @@ body {
     color: #f3f725;
 }
 
+/* Dispositivos tablet (pantallas de 768px o menos) */
+@media (max-width: 768px) {
+    #inicio header .contenido-header {
+        flex-direction: column;
+        padding: 10px;
+    }
 
+    .contenido-header nav {
+        position: static;
+        transform: none;
+        margin-top: 10px;
+    }
+
+    .contenido-header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenido-header nav ul li {
+        margin: 10px 0;
+    }
+
+    .contenido-header .icons {
+        margin-top: 10px;
+    }
+}
 /*PRODUCTOS*/
 .contenedor {
     display: flex;
