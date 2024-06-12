@@ -24,7 +24,7 @@ body {
 
 #inicio header {
     width: 100%;
-    background-color: #000000;
+    background-color: #202020;
 }
 
 #inicio header .contenido-header {
@@ -49,7 +49,13 @@ body {
 }
 
 .contenido-header .logo {
-    color: #e6ff0a;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 665;
+    font-style: normal;
+    display: block;
+    text-decoration: none;
+    color: #fffb05;
     font-size: 15px;
 }
 
@@ -64,28 +70,32 @@ body {
 }
 
 .contenido-header nav ul li a {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 665;
+    font-style: normal;
     display: block;
     text-decoration: none;
-    color: #fa8b42;
+    color: #ffffff;
     margin: 0px 20px;
     padding: 10px 2vw;
 }
 
 .contenido-header nav ul li a:hover {
-    background-color: #f3f725;
+    background-color: #fffb05;
     color: #000000;
 }
 
 .contenido-header .icons a {
     display: inline-block;
     text-decoration: none;
-    color: #fa8b42;
+    color: #ffffff;
     padding: 10px 20px;
     border-radius: 30px;
 }
 
 .contenido-header .icons a:hover {
-    color: #f3f725;
+    color: #fffb05;
 }
 
 /* Dispositivos tablet (pantallas de 768px o menos) */
@@ -131,6 +141,12 @@ body {
 }
 
 .ubicacion-info {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 665;
+    font-style: normal;
+    display: block;
+    text-decoration: none;
     width: 50%;
     padding: 20px;
 }
@@ -159,10 +175,16 @@ body {
 
 /* Pie de página */
 .pie-pagina {
-    background-color: #F3B664;
+    background-color: #1b1a1a;
 }
 
 .pie-pagina .grupo-1 {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 665;
+    font-style: normal;
+    display: block;
+    text-decoration: none;
     width: 100%;
     max-width: 1200px;
     margin: auto;
@@ -181,13 +203,13 @@ body {
 }
 
 .pie-pagina .grupo-1 .bloque h2 {
-    color: #000000;
+    color: #ffffff;
     margin-bottom: 15px;
     font-size: 18px;
 }
 
 .pie-pagina .grupo-1 .bloque p {
-    color: #000000;
+    color: #ffffff;
     margin-bottom: 5px;
     font-size: 14px;
 }
@@ -207,20 +229,28 @@ body {
 }
 
 .pie-pagina .grupo-2 {
-    background-color: #000000;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 665;
+    font-style: normal;
+    display: block;
+    text-decoration: none;
+    background-color: #fffb05;
     padding: 10px;
     text-align: center;
-    color: #fa8b42;
+    color: #000000;
 }
 
 .pie-pagina .grupo-1 .contacto {
-    background-color: #F3B664;
+    
+    background-color: #1b1a1a;
     text-align: left;
-    color: #000000;
+    color: #ffffff;
     padding: 10px -3px;
 }
 
 .pie-pagina .grupo-1 .contacto h2 {
+    
     font-size: 18px;
     margin-bottom: 15px;
 }
