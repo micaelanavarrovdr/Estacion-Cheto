@@ -13,7 +13,7 @@
 
 #inicio header {
     width: 100%;
-    background-color: #000000;
+    background-color: #202020;
 }
 
 #inicio header .contenido-header {
@@ -38,7 +38,11 @@
 }
 
 .contenido-header .logo {
-    color: #e6ff0a;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 665;
+    font-style: normal;
+    color: #fffb05;
     font-size: 15px;
 }
 
@@ -53,16 +57,20 @@
 }
 
 .contenido-header nav ul li a {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 665;
+    font-style: normal;
     display: block;
     text-decoration: none;
-    color: #fa8b42;
+    color: #ffffff;
     margin: 0px 20px;
     padding: 10px 2vw; 
     /*espacio que abarca al pasar por encima el mouse*/
 }
 
 .contenido-header nav ul li a:hover {
-    background-color: #f3f725;
+    background-color: #fffb05;
     color: #000000;
 }
 
@@ -70,13 +78,13 @@
 .contenido-header .icons a {
     display: inline-block;
     text-decoration: none;
-    color: #fa8b42;
+    color: #ffffff;
     padding: 10px 20px;
     border-radius: 30px;
 }
 
 .contenido-header .icons a:hover {
-    color: #f3f725;
+    color: #fffb05;
 }
 
 /*imagen fondo*/
@@ -96,9 +104,17 @@
 
 #inicio .fondo .contenido {
     max-width: 600px;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 665;
+    font-style: normal;
 }
 
 #inicio .fondo h2 {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 665;
+    font-style: normal;
     font-size: 36px;
     margin-bottom: 20px;
 }
@@ -109,6 +125,10 @@
 }
 
 #inicio .fondo button {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 665;
+    font-style: normal;
     background-color: #fffb05;
     color: #000000;
     border: none;
@@ -119,7 +139,7 @@
 }
 
 #inicio .fondo button:hover {
-    background-color: #e62e2E;
+    background-color: #070707;
 }
 
 /* Dispositivos tablet (pantallas de 768px o menos) */
@@ -190,4 +210,3 @@
         font-size: 12px;
     }
 }
-
