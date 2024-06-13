@@ -7,18 +7,18 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-color: #322C2B;
+    background-color: #252525;
 }
 
 .form{
-    background-color: #E4C59E;
+    background-color: #1b1b1b;
     padding: 15px;
     
 }
 h1{
     font-size: 2rem;
     font-family:Merriweather;
-    color: #322C2B;
+    color: #ffffff;
     text-align: center;
 
 }
@@ -36,7 +36,7 @@ input[type="text"]{
     border: none;
     margin-left: 10px;
     width: 91%;
-    background-color: #E4C59E;
+    background-color: #ffffff;
 }
 
 input[type="tel"]{
@@ -45,7 +45,7 @@ input[type="tel"]{
     border: none;
     margin-left: 10px;
     width: 91%;
-    background-color: #E4C59E;
+    background-color: #ffffff;
 }
 
 input[type="email"]{
@@ -54,7 +54,7 @@ input[type="email"]{
     border: none;
     margin-left: 10px;
     width: 91%;
-    background-color: #E4C59E;
+    background-color: #ffffff;
 }
 
 input[type="password"]{
@@ -63,7 +63,7 @@ input[type="password"]{
     border: none;
     margin-left: 10px;
     width: 91%;
-    background-color: #E4C59E;
+    background-color: #ffffff;
 }
 
 .button{
@@ -74,14 +74,14 @@ input[type="submit"]{
     width: 100%;
     padding: 15px;
     font-size: 1.4rem;
-    color: rgb(255, 255, 255);
-    background-color: rgb(23, 99, 122);
+    color: rgb(0, 0, 0);
+    background-color: rgb(245, 208, 42);
     font-family:Merriweather;
     border-radius: 7px;
 }
 input[type="submit"]:hover{
     color: rgb(255, 255, 255);
-    background-color: rgb(36, 143, 175);
+    background-color: rgb(0, 0, 0);
     font-weight: 700;
     font-family:Merriweather;
 }
@@ -98,7 +98,7 @@ label{
 }
 
 .link{
-    color: blue;
+    color: rgb(247, 243, 51);
     text-decoration: none;    
 }
 .link:hover{
