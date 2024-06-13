@@ -53,7 +53,11 @@ body {
 }
 
 .contenido-header .logo {
-    color: #e6ff0a;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 665;
+    font-style: normal;
+    color: #fffb05;
     font-size: 15px;
 }
 
@@ -61,29 +65,41 @@ body {
     text-align: center;
 }
 
+.contenido-header nav ul li i {
+    display: block;
+    color: #a8a8a8;
+    margin-bottom: 10px;
+}
+
 .contenido-header nav ul li a {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 665;
+    font-style: normal;
     display: block;
     text-decoration: none;
-    color: #fa8b42;
+    color: #ffffff;
     margin: 0px 20px;
-    padding: 10px 2vw;
+    padding: 10px 2vw; 
+    /*espacio que abarca al pasar por encima el mouse*/
 }
 
 .contenido-header nav ul li a:hover {
-    background-color: #f3f725;
+    background-color: #fffb05;
     color: #000000;
 }
 
+/*icons*/
 .contenido-header .icons a {
     display: inline-block;
     text-decoration: none;
-    color: #fa8b42;
+    color: #ffffff;
     padding: 10px 20px;
     border-radius: 30px;
 }
 
 .contenido-header .icons a:hover {
-    color: #f3f725;
+    color: #fffb05;
 }
 
 /* Dispositivos tablet (pantallas de 768px o menos) */
