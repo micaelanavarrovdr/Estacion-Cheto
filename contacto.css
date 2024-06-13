@@ -33,7 +33,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 20px;
+    padding: 20px;
     position: relative;
 }
 
@@ -48,37 +48,24 @@ body {
     list-style: none;
 }
 
-.contenido-header .logo {
+.contenido-header .logo h1 {
     font-family: "Nunito", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 665;
-    font-style: normal;
-    display: block;
-    text-decoration: none;
+    font-weight: bold;
     color: #fffb05;
-    font-size: 15px;
+    font-size: 1.5rem;
 }
 
 .contenido-header nav ul li {
     text-align: center;
 }
 
-.contenido-header nav ul li i {
-    display: block;
-    color: #a8a8a8;
-    margin-bottom: 10px;
-}
-
 .contenido-header nav ul li a {
     font-family: "Nunito", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 665;
-    font-style: normal;
-    display: block;
+    font-weight: bold;
     text-decoration: none;
     color: #ffffff;
     margin: 0px 20px;
-    padding: 10px 2vw;
+    padding: 10px 2vw; /* Ajuste según tu diseño */
 }
 
 .contenido-header nav ul li a:hover {
@@ -86,6 +73,7 @@ body {
     color: #000000;
 }
 
+/* Iconos */
 .contenido-header .icons a {
     display: inline-block;
     text-decoration: none;
@@ -98,7 +86,9 @@ body {
     color: #fffb05;
 }
 
-/* Dispositivos tablet (pantallas de 768px o menos) */
+
+
+/* Estilos para dispositivos móviles y tablets */
 @media (max-width: 768px) {
     #inicio header .contenido-header {
         flex-direction: column;
@@ -122,6 +112,58 @@ body {
 
     .contenido-header .icons {
         margin-top: 10px;
+    }
+
+
+    /* Mostrar y ocultar el menú desplegable */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    #nav {
+        display: none;
+        background-color: #202020;
+        position: absolute;
+        top: 60px; /* Ajuste según el tamaño de tu header */
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+        z-index: 1000;
+    }
+
+    #nav.active {
+        display: block;
+    }
+
+    #nav ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    #nav ul li {
+        margin-bottom: 15px;
+    }
+
+    #nav ul li a {
+        font-family: "Nunito", sans-serif;
+        font-weight: bold;
+        font-size: 1rem; /* Ajuste según tu diseño */
+        color: #ffffff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    #nav ul li a:hover {
+        color: #fffb05;
+    }
+}
+
+/* Ocultar el menúToggle en pantallas grandes */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
     }
 }
 
