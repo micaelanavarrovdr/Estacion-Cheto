@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #414040;
+}
+
+.main-content {
+    flex: 1;
+}
+
+#inicio {
+    display: flex;
+    flex-direction: column;
+}
+
+#inicio header {
+    width: 100%;
+    background-color: #202020;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+#inicio header .contenido-header {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    position: relative;
+}
+
+.contenido-header nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.contenido-header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.contenido-header .logo {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 665;
+    font-style: normal;
+    color: #ffd622;
+    font-size: 15px;
+}
+
+.contenido-header nav ul li {
+    text-align: center;
+}
+
+.contenido-header nav ul li a {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 665;
+    font-style: normal;
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0px 20px;
+    padding: 10px 2vw;
+}
+
+.contenido-header nav ul li a:hover {
+    background-color: #ffd622;
+    color: #000000;
+}
+
+.contenido-header .icons a {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+
+.contenido-header .icons a:hover {
+    color: #ffd622;
+}
+
+
+/*PRODUCTOS*/
+.contenedor {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 665;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding-top: 100px; /* Adjusted to account for fixed header */
+}
+
+.contenedor-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.item {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    cursor: default;
+    transition: all 400ms ease;
+}
+
+.item:hover{
+
+    box-shadow: 5px 5px 25px rgba(20, 20, 20, 0.548);
+    transform: translate(0.3s);
+}
+
+
+.item .titulo-item {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 665;
+    font-style: normal;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.item .img-item {
+    box-shadow: 1px 1px 5px rgba(20, 20, 20, 0.548);
+    border-radius: 10px;
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.item .precio-item {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 665;
+    font-style: normal;
+    display: block;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.quantity-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-controls .quantity-btn {
+    background: #ffd622;
+    border: none;
+    border-radius: 5px;
+    color: #000000;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.quantity-controls .quantity-btn:hover {
+    color: #ffd622;
+    background: #202020;
+}
+
+.quantity-controls .quantity {
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+.sidebar {
+    position: fixed;
+    right: -300px;
+    top: 80px; /* Adjusted to be below the fixed header */
+    width: 300px;
+    height: calc(100% - 80px); /* Adjusted to account for fixed header */
+    background-color: #f4f4f4;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease-in-out;
+    padding: 1rem;
+    overflow-y: auto;
+    z-index: 999; /* Below header */
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.close-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.sidebar.open {
+    right: 0;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-item button {
+    background: #ffd622;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.cart-item button:hover {
+    background: #ffd622;
+}
+
+#cart-total {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.pay-btn {
+    background-color: #ffd622;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.pay-btn:hover {
+    background-color: #ffd622;
+}
+
+/* Ocultar el menúToggle en pantallas grandes */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+
+/* Dispositivos tablet (pantallas de 768px o menos) */
+@media (max-width: 768px) {
+    #inicio header .contenido-header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .contenido-header nav {
+        position: static;
+        transform: none;
+        margin-top: 10px;
+    }
+
+    .contenido-header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenido-header nav ul li {
+        margin: 10px 0;
+    }
+
+    .contenido-header .icons {
+        margin-top: 10px;
+    }
+
+    #inicio .fondo .contenido {
+        padding: 10px;
+    }
+
+    #inicio .fondo h2 {
+        font-size: 28px;
+    }
+
+    #inicio .fondo p {
+        font-size: 16px;
+    }
+
+    #inicio .fondo button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    /* Mostrar y ocultar el menú desplegable */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    #nav {
+        display: none;
+        background-color: #202020;
+        position: absolute;
+        top: 60px; /* Ajuste según el tamaño de tu header */
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+        z-index: 1000;
+    }
+
+    #nav.active {
+        display: block;
+    }
+
+    #nav ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    #nav ul li {
+        margin-bottom: 15px;
+    }
+
+    #nav ul li a {
+        font-family: "Nunito", sans-serif;
+        font-weight: bold;
+        font-size: 1rem; /* Ajuste según tu diseño */
+        color: #ffffff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    #nav ul li a:hover {
+        color: #fffb05;
+    }
+
+}

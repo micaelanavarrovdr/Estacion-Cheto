@@ -33,7 +33,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 20px 20px;
     position: relative;
 }
 
@@ -48,32 +48,44 @@ body {
     list-style: none;
 }
 
-.contenido-header .logo h1 {
+.contenido-header .logo {
     font-family: "Nunito", sans-serif;
-    font-weight: bold;
-    color: #fffb05;
-    font-size: 1.5rem;
+    font-optical-sizing: auto;
+    font-weight: 665;
+    font-style: normal;
+    display: block;
+    text-decoration: none;
+    color: #ffd622;
+    font-size: 15px;
 }
 
 .contenido-header nav ul li {
     text-align: center;
 }
 
+.contenido-header nav ul li i {
+    display: block;
+    color: #a8a8a8;
+    margin-bottom: 10px;
+}
+
 .contenido-header nav ul li a {
     font-family: "Nunito", sans-serif;
-    font-weight: bold;
+    font-optical-sizing: auto;
+    font-weight: 665;
+    font-style: normal;
+    display: block;
     text-decoration: none;
     color: #ffffff;
     margin: 0px 20px;
-    padding: 10px 2vw; /* Ajuste según tu diseño */
+    padding: 10px 2vw;
 }
 
 .contenido-header nav ul li a:hover {
-    background-color: #fffb05;
-    color: #000000;
+    background-color: #ffd622;
+    color: #202020;
 }
 
-/* Iconos */
 .contenido-header .icons a {
     display: inline-block;
     text-decoration: none;
@@ -83,12 +95,10 @@ body {
 }
 
 .contenido-header .icons a:hover {
-    color: #fffb05;
+    color: #ffd622;
 }
 
-
-
-/* Estilos para dispositivos móviles y tablets */
+/* Dispositivos tablet (pantallas de 768px o menos) */
 @media (max-width: 768px) {
     #inicio header .contenido-header {
         flex-direction: column;
@@ -114,7 +124,7 @@ body {
         margin-top: 10px;
     }
 
-
+    
     /* Mostrar y ocultar el menú desplegable */
     .menu-toggle {
         display: block;
@@ -165,6 +175,7 @@ body {
     .menu-toggle {
         display: none;
     }
+
 }
 
 /* Sección ubicación */
@@ -258,7 +269,7 @@ body {
 
 .fa-brands {
     border-radius: 100px;
-    color: #FF6500;
+    color: #ffffff;
     display: inline-block;
     font-size: 30px;
     font-weight: 500;
@@ -267,7 +278,7 @@ body {
 }
 
 .fa-brands:hover {
-    color: #e62e2E;
+    color: #ffd622;
 }
 
 .pie-pagina .grupo-2 {
@@ -277,10 +288,10 @@ body {
     font-style: normal;
     display: block;
     text-decoration: none;
-    background-color: #fffb05;
+    background-color: #ffd622;
     padding: 10px;
     text-align: center;
-    color: #000000;
+    color: #202020;
 }
 
 .pie-pagina .grupo-1 .contacto {
